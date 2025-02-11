@@ -1,49 +1,45 @@
-University Search App
+# 🎓 University Search App  
 
-📌 Project Overview
+## 📌 Project Overview  
+A full-stack web application that allows users to **search for universities in India** using an external API. Users can mark universities as **favorites**, store them in a database, and view their saved list without calling the external API again.  
 
-A full-stack web application that allows users to search for universities in India using an external API. Users can mark universities as favorites and store them in a database. The favorites list can be accessed without calling the external API.
+---
 
-🚀 Features
+## 🚀 Features  
 
-Search Universities: Fetch universities in India from an external API.
+✅ **Search Universities** – Fetch universities in India from an external API.  
+✅ **Display Results** – Show university details in a table with clickable links.  
+✅ **Favorite Universities** – Mark universities as favorites and save them to a database.  
+✅ **View Favorites** – Display all saved universities without calling the API again.  
 
-Display Results: Show university details in a table with clickable links.
+---
 
-Favorite Universities: Mark universities as favorites and save them to a database.
+## 🛠️ Tech Stack  
 
-View Favorites: Display all saved universities without calling the API again.
+### **Backend:**  
+- **Node.js** + **Express.js** – API & server  
+- **MySQL** – Database storage  
+- **Sequelize** – ORM for database management  
 
-🛠️ Tech Stack
+### **Frontend:**  
+- **React.js** – UI framework  
+- **Bootstrap 5** – Styling  
 
-Backend:
+### **Other Tools:**  
+- **Git** – Version control  
 
-Node.js + Express.js (for API and server)
+---
 
-MySQL (for database storage)
-
-Sequelize (for database ORM)
-
-Frontend:
-
-React.js (for UI)
-
-Bootstrap 5 (for styling)
-
-Other Tools:
-
-Git (for version control)
-
-📂 Project Structure
-
+## 📂 Project Structure  
+```
 /university-search-app
 │── backend/            # Node.js & Express server
 │   ├── src/
 │       ├── routes/         # API endpoints
 │       ├── models/         # Database models
 │       ├── controllers/    # Business logic
-│       ├── config/        # Database connection setup
-│   ├── index.js        # Entry point
+│       ├── config/         # Database connection setup
+│   ├── index.js            # Entry point
 │
 │── frontend/           # React app
 │   ├── src/
@@ -54,56 +50,57 @@ Git (for version control)
 │
 │── README.md           # Documentation
 │── .gitignore          # Git ignored files
+```
 
-📖 API Endpoints
+---
 
-External API:
+## 📖 API Endpoints  
 
-GET https://university-domains-list-api.herokuapp.com/search?country=India → Fetch universities in India
+### **External API:**  
+🔹 `GET https://university-domains-list-api.herokuapp.com/search?country=India` – Fetch universities in India  
 
-Backend API:
+### **Backend API:**  
+🔹 `GET /api/universities` – Fetch universities from the external API  
+🔹 `POST /api/favourites` – Save a university to favorites  
+🔹 `GET /api/favourites` – Get all saved favorites  
 
-GET /api/universities → Fetch universities from external API
+---
 
-POST /api/favourites → Save a university to favorites
+## 🔧 Setup Instructions  
 
-GET /api/favourites → Get all saved favorites
+### **Prerequisites:**  
+✔️ Node.js & npm installed  
+✔️ MySQL database set up  
 
-🔧 Setup Instructions
-
-Prerequisites:
-
-Node.js & npm installed
-
-MySQL database set up
-
-Backend Setup:
-
+### **Backend Setup:**  
+```sh
 cd backend
 npm install
 npm start
+```
 
-Frontend Setup:
-
+### **Frontend Setup:**  
+```sh
 cd frontend
 npm install
 npm start
+```
 
-Database Setup:
-
-Create a MySQL database.
-
-Update the .env file with database credentials.
-
-Run migrations using Sequelize:
-
+### **Database Setup:**  
+1️⃣ Create a MySQL database.  
+2️⃣ Update the `.env` file with database credentials.  
+3️⃣ Run migrations using Sequelize:  
+```sh
 npx sequelize-cli db:migrate
+```
 
-📷 Screenshots
+---
 
-Search Page
-![alt text](image.png)
+## 📷 Screenshots  
 
-Favorites Page
-![alt text](image-1.png)
+### **🔎 Search Page**  
+![alt text](image.png) 
+
+### **⭐ Favorites Page**  
+![alt text](image-1.png) 
 
